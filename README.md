@@ -22,4 +22,18 @@ optional arguments:
 ```
 
 # Example
+## CSV File
+Below example will insert new user with someone as its username and changemeplease as the password
+```
+Email,Password,Groups,Status
+someone@gmail.com,changemeplease,group;group1,
+```
+
+The script will not reexecute the user creation if the status marked as done
+```
+Email,Password,Groups,Status
+someone@gmail.com,changemeplease,group;group1,DONE
+```
+
+## Command Line
 ```./iam_user.py --csv ~/Downloads/a.csv --profile dev --region ap-southeast-1```
